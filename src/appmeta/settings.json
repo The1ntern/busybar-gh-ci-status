@@ -1,0 +1,28 @@
+{
+  "format_version": 1,
+  "version": 1,
+  "fields": {
+    "repo": {
+      "type": "string",
+      "label": "Repository",
+      "description": "GitHub repository to watch, as owner/name (for example octocat/hello-world).",
+      "default": "",
+      "max_length": 140
+    },
+    "branch": {
+      "type": "string",
+      "label": "Branch",
+      "description": "Only show runs for this branch, for example main. Leave empty for the latest run on any branch.",
+      "default": "",
+      "max_length": 100
+    },
+    "token": {
+      "type": "string",
+      "label": "GitHub token",
+      "description": "Optional. Needed for private repositories and faster polling. Use a fine-grained token limited to this repository with Actions: Read-only.",
+      "default": "",
+      "max_length": 255,
+      "sensitive": true
+    }
+  }
+}
