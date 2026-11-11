@@ -1,7 +1,7 @@
 {
   "name": "github-ci-status",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Query the CI status of a GitHub repository live on the BUSY Bar",
   "author": "The1ntern",
   "type": "module",

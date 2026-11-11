@@ -69,7 +69,7 @@ my-app/
 │   │   ├── manifest.json         id, name, version, api_version
 │   │   ├── settings.json         the settings screen — optional
 │   │   ├── icon_front_8x8.png    front icon, 8×8 color — optional
-│   │   └── icon_back_11x11.png   back icon, 11×11 grayscale — optional
+│   │   └── icon_back_11x11.png   back icon, 11×11 RGBA silhouette — optional
 │   ├── images/
 │   ├── animations/
 │   └── sounds/
@@ -77,6 +77,10 @@ my-app/
 ```
 
 Both icons are optional; without them a default is used.
+
+The back icon is a silhouette: the back screen's menu tints it to one theme color (grey, or black when the item is selected), so only the alpha channel matters. Use a transparent background and opaque glyph pixels. An image without an alpha channel, such as a plain grayscale PNG, is fully opaque and shows as a solid box.
+
+The bar caches decoded images by path, so a reinstalled icon may keep showing the old one until the bar restarts.
 
 ## Resources
 
